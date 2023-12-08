@@ -1,6 +1,177 @@
-body {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
-  font-family: 'Lora', serif;
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: 'Lora', serif;
+  font-size: 16px;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header {
+  color: #19478C;
+  margin: 20px auto;
+  padding: 8px;
+  text-align: center;
+  width: 280px;
+}
+
+header h1 {
+  font-size: .875rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+header p {
+  font-size: .75rem;
+}
+
+header p:nth-of-type(1) {
+  font-weight: 600;
+}
+
+header p:nth-of-type(2) {
+  margin: 20px auto;
+  width: 240px;
+}
+
+nav {
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  padding: 10px;
+}
+
+.months {
+  display: flex;
+  justify-content: space-between;
+}
+
+.month {
+  align-items: center;
+  background-color: #F2F7FF;
+  border-radius: 4px;
+  color: #19478C;
+  display: flex;
+  font-weight: 800;
+  font-size: .875rem;
+  height: 24px;
+  justify-content: center;
+  text-transform: uppercase;
+  width: 48px;
+}
+
+.months :nth-child(2) {
+  background-color: #276ED9;
+  color: #ffffff;
+}
+
+.days {
+  background-color: #FAFCFF;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: repeat(7, 32px);
+  grid-auto-rows: minmax(auto, 32px);
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 60px;
+  margin-top: 60px;
+  padding: 16px 8px;
+}
+
+.day {
+  padding: 8px;
+  text-align: center;
+  color: #19478C;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.day.active {
+  background-color: #276ED9;
+  color: #FFFFFF;
+}
+
+.devotional {
+  display: flex;
+  gap: 20px;
+}
+
+.devotional__content {
+  display: flex;
+  flex-direction: column;
+  color: #19478C;
+  border-radius: 8px;
+  padding: 12px;
+  flex: 1;
+}
+
+.devotional__content:nth-of-type(1) {
+  background-color: #EFEDFF;
+}
+
+.devotional__content:nth-of-type(2) {
+  background-color: #FFFBE0;
+}
+
+.devotional__type {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: .875rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.book {
+  font-size: .875rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+
+footer {
+  background-color: #fafcff;
+  width: 100%;
+}
+
+.contacts {
+  display: flex;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  justify-content: center;
+  gap: 8px;
+}
+
+.contact {
+  width: 20px;
+  height: 20px;
+  background-color: #276ED9;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact a {
+  display: inline-flex;
 }

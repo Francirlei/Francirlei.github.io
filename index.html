@@ -10,79 +10,105 @@
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Plano Anual de Leitura da Bíblia</h1>
-    <p>Robert M. M'Chayne</p>
-  </header>
-  <div>
-    <p>A recomendação é de usar o plano de leitura em família e/ou pessoalmente 
-      como devocional.</p>
-  </div>
-  <nav>
-    <li>previous</li>
-    <li>Jan</li>
-    <li>Fev</li>
-    <li>Mar</li>
-    <li>Abr</li>
-    <li>next</li>
-  </nav>
-  <div>
-    <section>
-      <h2>Devoção Familiar</h2>
-      <ul>
-        <li>Gênesis 1</li>
-        <li>Mateus 1</li>
+  <div class="container">
+
+    <header>
+      <h1>Plano Anual de Leitura da Bíblia</h1>
+      <p>Robert M. M'Chayne</p>
+      
+      <p>A recomendação é de usar o plano de leitura em família 
+        e pessoalmente como devocional.</p>
+    </header>
+    <nav>
+      <ul class="months">
+        <li>
+          <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 1L1 5L5 9" stroke="#426599" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>          
+        </li>
+        <li class="month">Jan</li>
+        <li class="month">Fev</li>
+        <li class="month">Mar</li>
+        <li class="month">Abr</li>
+        <li>
+          <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 9L5 5L1 1" stroke="#426599" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </li>
       </ul>
-    </section>
-    <section>
-      <h2>Devoção Pessoal</h2>
-      <ul>
-        <li>Esdras 1</li>
-        <li>Atos 1</li>
-      </ul>
-    </section>
-  </div>
-  <div>
-    <ul>
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
-      <li>5</li>
-      <li>6</li>
-      <li>7</li>
-      <li>8</li>
-      <li>9</li>
-      <li>10</li>
-      <li>11</li>
-      <li>12</li>
-      <li>13</li>
-      <li>14</li>
-      <li>15</li>
-      <li>16</li>
-      <li>17</li>
-      <li>18</li>
-      <li>19</li>
-      <li>20</li>
-      <li>21</li>
-      <li>22</li>
-      <li>23</li>
-      <li>24</li>
-      <li>25</li>
-      <li>26</li>
-      <li>27</li>
-      <li>28</li>
-      <li>29</li>
-      <li>30</li>
-      <li>31</li>
+    </nav>
+    <ul class="days">
+      <li class="day">1</li>
+      <li class="day">2</li>
+      <li class="day">3</li>
+      <li class="day">4</li>
+      <li class="day">5</li>
+      <li class="day">6</li>
+      <li class="day">7</li>
+      <li class="day">8</li>
+      <li class="day">9</li>
+      <li class="day active">10</li>
+      <li class="day">11</li>
+      <li class="day">12</li>
+      <li class="day">13</li>
+      <li class="day">14</li>
+      <li class="day">15</li>
+      <li class="day">16</li>
+      <li class="day">17</li>
+      <li class="day">18</li>
+      <li class="day">19</li>
+      <li class="day">20</li>
+      <li class="day">21</li>
+      <li class="day">22</li>
+      <li class="day">23</li>
+      <li class="day">24</li>
+      <li class="day">25</li>
+      <li class="day">26</li>
+      <li class="day">27</li>
+      <li class="day">28</li>
+      <li class="day">29</li>
+      <li class="day">30</li>
+      <li class="day">31</li>
     </ul>
+    <div class="devotional">
+      <section class="devotional__content">
+        <h2 class="devotional__type">Leitura Familiar</h2>
+        <ul>
+          <li class="book">Gênesis 1</li>
+          <li class="book">Mateus 1</li>
+        </ul>
+      </section>
+      <section class="devotional__content">
+        <h2 class="devotional__type">Leitura Pessoal</h2>
+        <ul>
+          <li class="book">Esdras 1</li>
+          <li class="book">Atos 1</li>
+        </ul>
+      </section>
+    </div>
   </div>
   <footer>
-    <ul>
-      <li>LinkedIn</li>
-      <li>GitHub</li>
-      <li>Facebook</li>
-      <li>Instagram</li>
+    <ul class="contacts">
+      <li class="contact">
+        <a href="https://www.facebook.com/francirlei.sousasilva/">
+          <img src="./img/icons/facebook.svg" alt="Facebook">
+        </a>
+      </li>
+      <li class="contact">
+        <a href="https://www.instagram.com/francirlei14/">
+          <img src="./img/icons/instagram.svg" alt="Instagram">
+        </a>
+      </li>
+      <li class="contact">
+        <a href="https://www.linkedin.com/in/francirlei-silva/">
+          <img src="./img/icons/linkedin.svg" alt="LinkedIn">
+        </a>
+      </li>
+      <li class="contact">
+        <a href="https://github.com/Francirlei">
+          <img src="./img/icons/github.svg" alt="GitHub">
+        </a>
+      </li>
     </ul>
   </footer>
 </body>
