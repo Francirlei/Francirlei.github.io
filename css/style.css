@@ -48,6 +48,7 @@ nav {
   margin-left: auto;
   margin-right: auto;
   width: 300px;
+  position: relative;
 }
 
 ul {
@@ -56,11 +57,28 @@ ul {
 
 .container {
   padding: 10px;
+  flex: 1;
 }
 
 .months {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(12, 48px);
+  grid-auto-rows: 24px;
+  overflow-x: scroll;
+  gap: 36px;
+}
+
+.arrow-icon {
+  position: absolute;
+  top: 0;
+}
+
+.arrow-icon:first-of-type {
+  left: -20px;
+}
+
+.arrow-icon:last-of-type {
+  right: -20px;
 }
 
 .month {
@@ -71,10 +89,8 @@ ul {
   display: flex;
   font-weight: 800;
   font-size: .875rem;
-  height: 24px;
   justify-content: center;
   text-transform: uppercase;
-  width: 48px;
 }
 
 .months :nth-child(2) {
@@ -119,6 +135,7 @@ ul {
 .devotional__content {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   color: #19478C;
   border-radius: 8px;
   padding: 12px;
@@ -174,4 +191,112 @@ footer {
 
 .contact a {
   display: inline-flex;
+}
+
+@media(min-width: 400px) {
+  body {
+    align-items: center;
+  }
+
+  .container {
+    width: 360px;
+    flex: initial;
+  }
+}
+
+@media(min-width: 768px) {
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  nav {
+    width: initial;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .arrow-icon {
+    display: none;
+  }
+
+  .months {
+    display: grid;
+    grid-template-columns: repeat(3, 48px);
+    gap: 20px;
+    overflow-x: hidden;
+  }
+
+  .days {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .devotional {
+    flex-direction: column;
+  }
+}
+
+@media(min-width: 1280px) {
+  .container {
+    justify-content: space-around;
+  }
+
+  header {
+    width: 580px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header p:nth-of-type(1) {
+    font-size: 1.125rem;
+  }
+
+  header p:nth-of-type(2) {
+    font-size: 1.5rem;
+    margin: 50px auto;
+    width: 500px;
+  }
+
+  .months {
+    grid-template-columns: repeat(3, 80px);
+    grid-auto-rows: 46px;
+  }
+
+  .month {
+    font-size: 1.25rem;
+  }
+
+  .days {
+    padding: 48px;
+    gap: 20px;
+    grid-template-columns: repeat(7, 48px);
+    grid-auto-rows: minmax(auto, 48px);
+  }
+
+  .day {
+    font-size: 1.75rem;
+  }
+
+  .devotional__content {
+    padding: 28px;
+  }
+
+  .devotional__type {
+    font-size: 1.5rem;
+  }
+
+  .book {
+    font-size: 1.25rem;
+  }
+}
+
+@media(min-width: 1440px) {
+  .container {
+    width: 1440px;
+  }
 }
