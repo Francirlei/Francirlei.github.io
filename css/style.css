@@ -74,7 +74,7 @@ ul {
   scrollbar-width: none;
 }
 
-.months::webkit-scrollbar {
+.months::-webkit-scrollbar {
   display: none;
 }
 
@@ -101,11 +101,13 @@ ul {
   font-size: .875rem;
   justify-content: center;
   text-transform: uppercase;
+  transition: all .4s;
 }
 
-.months :nth-child(2) {
+.month:hover {
   background-color: var(--button-active);
   color: #ffffff;
+  cursor: pointer;
 }
 
 .days {
@@ -130,6 +132,13 @@ ul {
   justify-content: center;
   align-items: center;
   border-radius: 4px;
+  transition: all .4s;
+}
+
+.day:hover {
+  background-color: var(--button-active);
+  color: #ffffff;
+  cursor: pointer;
 }
 
 .day.active {
