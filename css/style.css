@@ -1,3 +1,8 @@
+:root {
+  --main-color: #19478C;
+  --button-active: #276ED9;
+}
+
 *,
 *::after,
 *::before {
@@ -17,7 +22,7 @@ body {
 }
 
 header {
-  color: #19478C;
+  color: var(--main-color);
   margin: 20px auto;
   padding: 8px;
   text-align: center;
@@ -66,6 +71,11 @@ ul {
   grid-auto-rows: 24px;
   overflow-x: scroll;
   gap: 36px;
+  scrollbar-width: none;
+}
+
+.months::webkit-scrollbar {
+  display: none;
 }
 
 .arrow-icon {
@@ -85,7 +95,7 @@ ul {
   align-items: center;
   background-color: #F2F7FF;
   border-radius: 4px;
-  color: #19478C;
+  color: var(--main-color);
   display: flex;
   font-weight: 800;
   font-size: .875rem;
@@ -94,7 +104,7 @@ ul {
 }
 
 .months :nth-child(2) {
-  background-color: #276ED9;
+  background-color: var(--button-active);
   color: #ffffff;
 }
 
@@ -114,7 +124,7 @@ ul {
 .day {
   padding: 8px;
   text-align: center;
-  color: #19478C;
+  color: var(--main-color);
   font-weight: 800;
   display: flex;
   justify-content: center;
@@ -123,7 +133,7 @@ ul {
 }
 
 .day.active {
-  background-color: #276ED9;
+  background-color: var(--button-active);
   color: #FFFFFF;
 }
 
@@ -136,7 +146,7 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: #19478C;
+  color: var(--main-color);
   border-radius: 8px;
   padding: 12px;
   flex: 1;
@@ -182,7 +192,7 @@ footer {
 .contact {
   width: 20px;
   height: 20px;
-  background-color: #276ED9;
+  background-color: var(--button-active);
   border-radius: 4px;
   display: flex;
   align-items: center;
