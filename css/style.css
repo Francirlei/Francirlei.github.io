@@ -101,13 +101,26 @@ ul {
   font-size: .875rem;
   justify-content: center;
   text-transform: uppercase;
-  transition: all .4s;
+  transition: background-color .4s;
+}
+
+.month:hover,
+.month:active {
+  color: #ffffff;
+  cursor: pointer;
 }
 
 .month:hover {
   background-color: var(--button-active);
-  color: #ffffff;
-  cursor: pointer;
+}
+
+.month:active {
+  background-color: #2263C3;
+}
+
+.month:focus,
+.day:focus {
+  outline: 1px solid var(--button-active);
 }
 
 .days {
@@ -132,18 +145,23 @@ ul {
   justify-content: center;
   align-items: center;
   border-radius: 4px;
-  transition: all .4s;
+  transition: background-color .4s;
 }
 
-.day:hover {
-  background-color: var(--button-active);
+.day:hover,
+.day:active,
+.day.active {
   color: #ffffff;
   cursor: pointer;
 }
 
-.day.active {
+.day:hover {
   background-color: var(--button-active);
-  color: #FFFFFF;
+}
+
+.day:active,
+.day.active {
+  background-color: #2263C3;
 }
 
 .devotional {
@@ -245,7 +263,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 48px);
     gap: 20px;
-    overflow-x: hidden;
+    overflow-x: initial;
   }
 
   .days {
