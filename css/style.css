@@ -70,8 +70,10 @@ ul {
   grid-template-columns: repeat(12, 48px);
   grid-auto-rows: 24px;
   overflow-x: scroll;
-  gap: 36px;
+  gap: 34px;
   scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
 }
 
 .months::-webkit-scrollbar {
@@ -97,30 +99,32 @@ ul {
   border-radius: 4px;
   color: var(--main-color);
   display: flex;
-  font-weight: 800;
+  font-weight: 600;
   font-size: .875rem;
   justify-content: center;
   text-transform: uppercase;
-  transition: background-color .4s;
+  transition: background-color .4s, outline .4s;
+  scroll-snap-align: center;
 }
 
 .month:hover,
-.month:active {
+.month:active,
+.month.active,
+.month[data-month-active="true"] {
   color: #ffffff;
   cursor: pointer;
 }
 
-.month:hover {
+.month:hover,
+.month:active,
+.month.active,
+.month[data-month-active="true"] {
   background-color: var(--button-active);
-}
-
-.month:active {
-  background-color: #2263C3;
 }
 
 .month:focus,
 .day:focus {
-  outline: 1px solid var(--button-active);
+  outline: 1px solid #66A3FF;
 }
 
 .days {
