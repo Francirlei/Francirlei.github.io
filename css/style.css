@@ -111,15 +111,9 @@ ul {
 .month:active,
 .month.active,
 .month[data-month-active="true"] {
+  background-color: var(--button-active);
   color: #ffffff;
   cursor: pointer;
-}
-
-.month:hover,
-.month:active,
-.month.active,
-.month[data-month-active="true"] {
-  background-color: var(--button-active);
 }
 
 .month:focus,
@@ -154,18 +148,11 @@ ul {
 
 .day:hover,
 .day:active,
-.day.active {
+.day.active,
+.day[data-day-active="true"] {
+  background-color: var(--button-active);
   color: #ffffff;
   cursor: pointer;
-}
-
-.day:hover {
-  background-color: var(--button-active);
-}
-
-.day:active,
-.day.active {
-  background-color: #2263C3;
 }
 
 .devotional {
