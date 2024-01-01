@@ -5,8 +5,10 @@ const containerDays = document.querySelector(".days");
 const familyReading = document.getElementById("familyReading");
 const personalReading = document.getElementById("personalReading");
 
-let devotionalMonth = 1;
-let devotionalDay = 1;
+let dateNow = new Date();
+
+let devotionalMonth = dateNow.getMonth() + 1;
+let devotionalDay = dateNow.getDate();
 
 arrowRight.addEventListener("click", () => {
   containerMonths.scrollLeft += containerMonths.offsetWidth / 2;
@@ -57,7 +59,7 @@ function createElementMonth(numberMonths) {
     attrTabindex.value = "0";
     attrRole.value = "button";
     attrDataNumberMonth.value = data.id;
-    attrDataMonthActive.value = data.id === 1 ? true : false;
+    attrDataMonthActive.value = data.id === devotionalMonth ? true : false;
 
     monthElement.setAttributeNode(attrClass);
     monthElement.setAttributeNode(attrTabindex);
@@ -92,7 +94,7 @@ function createElementDay(numberDays) {
     attrTabindex.value = "0";
     attrRole.value = "button";
     attrDataNumberDay.value = d.day;
-    attrDataMonthDay.value = d.day === 1 ? true : false;
+    attrDataMonthDay.value = d.day === devotionalDay ? true : false;
 
     dayElement.setAttributeNode(attrClass);
     dayElement.setAttributeNode(attrTabindex);
